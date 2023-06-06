@@ -8,8 +8,8 @@ export default function App() {
   const [val, setval] = useState('india');
 
   return (
-    <div className="container">
-      <div className="w-100 bg-light p-1 d-flex">
+    <div className="">
+      <div className="w-100 bg-light p-2 d-flex">
         <input
           type="text"
           value={val}
