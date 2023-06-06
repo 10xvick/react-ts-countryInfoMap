@@ -8,13 +8,24 @@ export default function App() {
 
   return (
     <div className="container">
-      <div className="w-100 bg-light">abc</div>
-      <div className="row">
-        <div className="col-8">abc</div>
-        <div className="col-4">
-          <Info country={country} />
-        </div>
+      <div className="w-100 bg-light p-1">
+        <input
+          type="text"
+          value={country}
+          onChange={(e) => {
+            setCountry(e.target.value);
+          }}
+          className="form-control"
+        />
       </div>
+      {country && (
+        <div className="row">
+          <div className="col-8">abc</div>
+          <div className="col-4">
+            <Info country={country} />
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -46,15 +46,22 @@ function Info({country}) {
 
   return (
     <div>
-      <h1>{countryData.name.common}</h1>
-      <p>Capital: {countryData.capital}</p>
-      <p>Currency: {countryData.currencies[Object.keys(countryData.currencies)[0]].name}</p>
-      <p>Population: {countryData.population}</p>
-      <p>Latitude: {countryData.latlng[0]}</p>
-      <p>Longitude: {countryData.latlng[1]}</p>
-      <p>Language: {Object.values(countryData.languages)[0]}</p>
-      <p>Area: {countryData.area} km²</p>
+      <h1 className='text-center text-uppercase'>{countryData.name.common}</h1>
       <img src={countryData.flags.png} alt="Flag" style={{ width: '200px' }} />
+      
+      <p><span className='fw-bold'>Capital:</span> {countryData.capital}</p>
+      <p>
+        <span className='fw-bold'>Currency</span> : {countryData.currencies[Object.keys(countryData.currencies)[0]].name}</p>
+      <p>
+        <span className='fw-bold'>Population</span> : {countryData.population}</p>
+      <p>
+        <span className='fw-bold'>Latitude</span> : {countryData.latlng[0]}</p>
+      <p>
+        <span className='fw-bold'>Longitude</span> : {countryData.latlng[1]}</p>
+      <p>
+        <span className='fw-bold'>Language</span> : {Object.values(countryData.languages).join(', ')}</p>
+      <p>
+        <span className='fw-bold'>Area:</span> : {countryData.area} km²</p>
     </div>
   );
 }
