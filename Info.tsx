@@ -8,7 +8,7 @@ function Info({country}) {
 
   useEffect(() => {
     fetchCountryData(country);
-  }, []);
+  }, [country]);
 
   const fetchCountryData = (countryName) => {
     setIsLoading(true);
@@ -48,7 +48,7 @@ function Info({country}) {
     <div>
       <h1 className='text-center text-uppercase'>{countryData.name.common}</h1>
       <img src={countryData.flags.png} alt="Flag" style={{ width: '200px' }} />
-      
+
       <p><span className='fw-bold'>Capital:</span> {countryData.capital}</p>
       <p>
         <span className='fw-bold'>Currency</span> : {countryData.currencies[Object.keys(countryData.currencies)[0]].name}</p>

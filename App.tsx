@@ -5,18 +5,22 @@ import './style.css';
 
 export default function App() {
   const [country, setCountry] = useState('india');
+  const [val, setval] = useState('india');
 
   return (
     <div className="container">
-      <div className="w-100 bg-light p-1">
+      <div className="w-100 bg-light p-1 d-flex">
         <input
           type="text"
-          value={country}
+          value={val}
           onChange={(e) => {
-            setCountry(e.target.value);
+            setval(e.target.value);
           }}
           className="form-control"
         />
+        <button onClick={() => setCountry(val)} className="btn">
+          🔍
+        </button>
       </div>
       {country && (
         <div className="row">
