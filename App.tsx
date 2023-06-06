@@ -24,7 +24,7 @@ export default function App() {
       </div>
       {country && (
         <div className="row">
-          <div className="col-8">abc</div>
+          <div className="col-8"></div>
           <div className="col-4">
             <Info country={country} />
           </div>
