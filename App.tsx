@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { useState } from 'react';
 import Info from './Info';
+import MapWithPlaceholder from './LMap';
+import WorldMap from './Map';
 import './style.css';
 
 export default function App() {
@@ -24,7 +26,9 @@ export default function App() {
       </div>
       {country && (
         <div className="row">
-          <div className="col-8"></div>
+          <div className="col-8">
+            <MapWithPlaceholder/>
+          </div>
           <div className="col-4">
             <Info country={country} />
           </div>
